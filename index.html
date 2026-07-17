@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>International Montessori Academy | Education From The Inside Out</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:       #1C1C1A;
+  --burg:      #7A2535;
+  --burg-soft: #9E3347;
+  --burg-pale: #F5E9EB;
+  --sand:      #F2EDE4;
+  --sand-dark: #E8E0D4;
+  --terra:     #C4674A;
+  --terra-lt:  #F5DDD6;
+  --sage:      #6B8F71;
+  --sage-lt:   #DFF0E1;
+  --gold:      #B8930A;
+  --gold-lt:   #F7EEC8;
+  --sky:       #3A7CA5;
+  --sky-lt:    #D6EBF7;
+  --warm:      #FDFCFA;
+  --mid:       #6B6860;
+  --border:    #E0D9CF;
+  --font-d:    'Fraunces', Georgia, serif;
+  --font-b:    'Inter', system-ui, sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-b);background:var(--sand);color:var(--ink);overflow-x:hidden;line-height:1.6;}
+
+/* ─── TOPBAR ─── */
+.topbar{background:var(--ink);padding:9px 6%;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;}
+.topbar-l{font-size:0.7rem;color:rgba(255,255,255,0.45);letter-spacing:0.06em;}
+.topbar-r{display:flex;gap:18px;}
+.topbar-r a{font-size:0.7rem;color:rgba(255,255,255,0.6);text-decoration:none;font-weight:500;transition:color .2s;}
+.topbar-r a:hover{color:white;}
+
+/* ─── NAV ─── */
+nav{position:sticky;top:0;z-index:200;background:var(--warm);border-bottom:1px solid var(--border);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:74px;}
+.nav-logo img{height:67px;width:auto;display:block;}
+.nav-links{display:flex;gap:0;align-items:center;}
+.nav-links a{font-size:0.8rem;font-weight:500;color:var(--mid);text-decoration:none;padding:8px 13px;border-radius:6px;transition:all .2s;letter-spacing:0.01em;}
+.nav-links a:hover{color:var(--burg);background:var(--burg-pale);}
+.nav-book{background:var(--burg);color:white!important;padding:9px 20px!important;border-radius:6px!important;font-weight:600!important;margin-left:10px;transition:all .2s!important;box-shadow:0 2px 8px rgba(122,37,53,.25);}
+.nav-book:hover{background:var(--burg-soft)!important;transform:translateY(-1px);box-shadow:0 4px 16px rgba(122,37,53,.32)!important;}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .3s;}
+.mob{display:none;position:fixed;inset:0;z-index:199;background:var(--warm);padding:90px 6% 40px;flex-direction:column;gap:0;}
+.mob.open{display:flex;}
+.mob a{font-family:var(--font-d);font-size:1.8rem;font-weight:300;color:var(--ink);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--border);}
+
+/* ─── HERO ─── */
+.hero{background:var(--warm);min-height:92vh;padding:0 6%;display:grid;grid-template-columns:1.1fr 0.9fr;align-items:center;gap:48px;position:relative;overflow:hidden;}
+
+/* signature blob */
+.blob{position:absolute;top:-180px;left:-160px;width:680px;height:680px;border-radius:63% 37% 54% 46% / 55% 48% 52% 45%;background:var(--terra-lt);opacity:0.55;pointer-events:none;z-index:0;}
+.blob2{position:absolute;bottom:-120px;right:-80px;width:360px;height:360px;border-radius:40% 60% 70% 30% / 45% 55% 45% 55%;background:var(--sage-lt);opacity:0.5;pointer-events:none;z-index:0;}
+
+.hero-left{position:relative;z-index:1;padding:80px 0;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-b);font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--terra);margin-bottom:24px;}
+.hero-eyebrow::before{content:'';display:inline-block;width:24px;height:2px;background:var(--terra);border-radius:2px;}
+
+.hero-title{font-family:var(--font-d);font-size:clamp(3rem,5.5vw,5.2rem);font-weight:300;color:var(--ink);line-height:1.03;letter-spacing:-0.02em;margin-bottom:6px;}
+.hero-title .burg{color:var(--burg);}
+.hero-title em{font-style:italic;font-weight:300;}
+.hero-tagline{font-family:var(--font-d);font-style:italic;font-size:1.15rem;font-weight:300;color:var(--mid);margin-bottom:22px;padding-left:2px;}
+.hero-body{font-size:0.95rem;color:var(--mid);line-height:1.82;max-width:420px;margin-bottom:36px;font-weight:300;}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:44px;}
+.btn-fill{background:var(--burg);color:white;padding:13px 28px;border-radius:6px;font-family:var(--font-b);font-size:0.87rem;font-weight:600;border:none;cursor:pointer;text-decoration:none;box-shadow:0 3px 12px rgba(122,37,53,.28);transition:all .2s;display:inline-flex;align-items:center;gap:7px;}
+.btn-fill:hover{background:var(--burg-soft);transform:translateY(-1px);box-shadow:0 6px 20px rgba(122,37,53,.36);}
+.btn-ghost{background:transparent;color:var(--ink);padding:12px 24px;border-radius:6px;font-family:var(--font-b);font-size:0.87rem;font-weight:500;border:1.5px solid var(--border);cursor:pointer;text-decoration:none;transition:all .2s;display:inline-flex;align-items:center;gap:7px;}
+.btn-ghost:hover{border-color:var(--burg);color:var(--burg);}
+.hero-chips{display:flex;gap:8px;flex-wrap:wrap;}
+.hchip{font-size:0.75rem;font-weight:500;color:var(--mid);background:var(--sand);border:1px solid var(--border);padding:6px 12px;border-radius:20px;display:flex;align-items:center;gap:5px;}
+.hchip-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+
+/* ─── HERO RIGHT: LOCATION CARDS ─── */
+.hero-right{position:relative;z-index:1;padding:80px 0;display:flex;flex-direction:column;gap:14px;}
+.lc{background:var(--warm);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(28,28,26,.07);transition:all .2s;}
+.lc:hover{box-shadow:0 6px 28px rgba(28,28,26,.12);transform:translateY(-2px);}
+.lc-head{padding:14px 18px;display:flex;align-items:center;gap:12px;}
+.lc-head-ico{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+.lc-head-name{font-size:0.85rem;font-weight:600;color:white;line-height:1.3;}
+.lc-head-sub{font-size:0.6rem;color:rgba(255,255,255,.6);margin-top:1px;font-weight:400;letter-spacing:0.04em;}
+.lc-body{padding:16px 18px;display:flex;flex-direction:column;gap:9px;}
+.lc-row{display:flex;gap:9px;align-items:flex-start;}
+.lc-ico{width:26px;height:26px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;margin-top:1px;}
+.lc-lbl{font-size:0.58rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--mid);margin-bottom:1px;}
+.lc-val{font-size:0.82rem;font-weight:400;color:var(--ink);line-height:1.45;}
+.lc-val a{color:var(--burg);text-decoration:none;font-weight:500;}
+.lc-val a:hover{text-decoration:underline;}
+.lc-dir{display:inline-flex;align-items:center;gap:5px;padding:6px 12px;border-radius:6px;font-size:0.74rem;font-weight:600;text-decoration:none;transition:all .2s;align-self:flex-start;margin-top:4px;border:1px solid transparent;}
+
+/* ─── TRUST STRIP ─── */
+.trust{background:var(--ink);padding:14px 6%;display:flex;align-items:center;gap:0;overflow-x:auto;}
+.titem{display:flex;align-items:center;gap:8px;padding:6px 24px;font-size:0.73rem;font-weight:400;color:rgba(255,255,255,.5);border-right:1px solid rgba(255,255,255,.1);white-space:nowrap;flex-shrink:0;}
+.titem:first-child{padding-left:0;}
+.titem:last-child{border-right:none;}
+.titem-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+
+/* ─── SECTION SHELL ─── */
+.sec{padding:96px 6%;}
+.sec-inner{max-width:1160px;margin:0 auto;}
+.sec-eyebrow{font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+.sec-eyebrow::after{content:'';flex:1;height:1px;background:var(--border);}
+.sec-title{font-family:var(--font-d);font-size:clamp(1.9rem,3vw,2.8rem);font-weight:300;color:var(--ink);line-height:1.15;letter-spacing:-0.01em;}
+.sec-title em{font-style:italic;}
+.sec-body{font-size:0.95rem;color:var(--mid);line-height:1.8;max-width:540px;margin-top:14px;font-weight:300;}
+
+/* ─── MISSION ─── */
+.mission{background:var(--warm);}
+.mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:56px;}
+.mission-img-wrap{position:relative;}
+.mission-img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px;}
+.mission-badge{position:absolute;bottom:-18px;right:-18px;background:var(--terra);color:white;padding:20px 22px;border-radius:10px;box-shadow:0 4px 20px rgba(196,103,74,.35);}
+.mission-badge .nb{font-family:var(--font-d);font-size:2.2rem;font-weight:300;line-height:1;}
+.mission-badge .nl{font-size:0.62rem;font-weight:600;opacity:.8;text-transform:uppercase;letter-spacing:0.07em;margin-top:3px;}
+.mission-text p{font-size:0.93rem;color:var(--mid);line-height:1.85;margin-bottom:15px;font-weight:300;}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:32px;}
+.pillar{padding:20px;border-radius:10px;border:1px solid var(--border);transition:all .2s;cursor:default;}
+.pillar:hover{border-color:transparent;box-shadow:0 4px 20px rgba(28,28,26,.1);transform:translateY(-2px);}
+.pi{font-size:1.5rem;margin-bottom:8px;}
+.pt{font-size:0.87rem;font-weight:600;color:var(--ink);margin-bottom:4px;}
+.pd{font-size:0.76rem;line-height:1.6;color:var(--mid);font-weight:300;}
+
+/* ─── PROGRAMS ─── */
+.programs{background:var(--sand);}
+.prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:52px;background:var(--border);border-radius:12px;overflow:hidden;}
+.prog-card{background:var(--warm);padding:36px 28px;transition:all .2s;position:relative;overflow:hidden;}
+.prog-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--c-accent,var(--burg));}
+.prog-card:hover{background:var(--sand);}
+.prog-img{width:100%;height:170px;object-fit:cover;border-radius:8px;margin-bottom:20px;}
+.prog-lbl{font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;padding:4px 10px;border-radius:20px;display:inline-flex;align-items:center;gap:5px;}
+.prog-name{font-family:var(--font-d);font-size:1.3rem;font-weight:400;color:var(--ink);margin-bottom:5px;line-height:1.2;}
+.prog-grade{font-size:0.71rem;font-weight:600;color:var(--mid);margin-bottom:10px;letter-spacing:0.04em;text-transform:uppercase;}
+.prog-desc{font-size:0.82rem;color:var(--mid);line-height:1.7;font-weight:300;}
+
+/* ─── ACADEMICS ─── */
+.academics{background:var(--warm);}
+.acad-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:48px;}
+.acad-card{padding:28px;border-radius:10px;border:1px solid var(--border);transition:all .2s;position:relative;overflow:hidden;}
+.acad-card::after{content:'';position:absolute;bottom:0;left:28px;right:28px;height:2px;background:var(--c-a,var(--burg));border-radius:2px;transform:scaleX(0);transition:transform .25s;transform-origin:left;}
+.acad-card:hover{box-shadow:0 4px 24px rgba(28,28,26,.09);}
+.acad-card:hover::after{transform:scaleX(1);}
+.acad-ico{font-size:1.8rem;margin-bottom:14px;}
+.acad-t{font-size:0.95rem;font-weight:600;color:var(--ink);margin-bottom:7px;}
+.acad-d{font-size:0.82rem;color:var(--mid);line-height:1.72;font-weight:300;}
+.acad-note{font-size:0.76rem;color:var(--mid);margin-top:16px;padding:14px 18px;background:var(--sand);border-radius:8px;border-left:3px solid var(--border);line-height:1.65;font-weight:300;}
+
+/* ─── STATS ─── */
+.stats{background:var(--burg);padding:0 6%;display:grid;grid-template-columns:repeat(4,1fr);}
+.stat{padding:48px 24px;text-align:center;border-right:1px solid rgba(255,255,255,.12);position:relative;}
+.stat:last-child{border-right:none;}
+.stat-n{font-family:var(--font-d);font-size:3rem;font-weight:300;color:white;line-height:1;margin-bottom:6px;letter-spacing:-0.02em;}
+.stat-l{font-size:0.71rem;font-weight:500;color:rgba(255,255,255,.55);letter-spacing:0.07em;text-transform:uppercase;}
+.stat-e{font-size:1.6rem;margin-bottom:12px;display:block;}
+
+/* ─── ADMISSIONS ─── */
+.admissions{background:var(--sand);}
+.adm-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:72px;align-items:start;margin-top:52px;}
+.steps{display:flex;flex-direction:column;gap:0;}
+.step{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--border);}
+.step:first-child{padding-top:0;}
+.step-n{font-family:var(--font-d);font-size:2rem;font-weight:300;color:var(--c-s,var(--burg));line-height:1;flex-shrink:0;width:36px;}
+.step-t{font-size:0.9rem;font-weight:600;color:var(--ink);margin-bottom:4px;}
+.step-d{font-size:0.8rem;color:var(--mid);line-height:1.6;font-weight:300;}
+
+/* ─── FORM ─── */
+.form-wrap{background:var(--warm);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 4px 32px rgba(28,28,26,.08);}
+.form-head{background:var(--ink);padding:24px 28px;}
+.form-head-t{font-family:var(--font-d);font-size:1.35rem;font-weight:300;color:white;margin-bottom:3px;}
+.form-head-s{font-size:0.76rem;color:rgba(255,255,255,.45);font-weight:300;}
+.form-bod{padding:26px 28px;}
+.fg{margin-bottom:14px;}
+.fg label{display:block;font-size:0.67rem;font-weight:700;color:var(--mid);margin-bottom:5px;text-transform:uppercase;letter-spacing:0.07em;}
+.fg input,.fg select,.fg textarea{width:100%;padding:10px 13px;font-family:var(--font-b);font-size:0.86rem;color:var(--ink);background:var(--sand);border:1.5px solid var(--border);border-radius:6px;outline:none;transition:all .2s;appearance:none;-webkit-appearance:none;font-weight:300;}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--burg);background:var(--warm);box-shadow:0 0 0 3px rgba(122,37,53,.08);}
+.fg select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%237A2535' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px;background-color:var(--sand);}
+.fg textarea{resize:vertical;min-height:78px;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.fsub{width:100%;padding:13px;background:var(--burg);color:white;font-family:var(--font-b);font-size:0.9rem;font-weight:600;border:none;cursor:pointer;border-radius:6px;box-shadow:0 3px 12px rgba(122,37,53,.28);transition:all .2s;letter-spacing:0.02em;}
+.fsub:hover{background:var(--burg-soft);transform:translateY(-1px);box-shadow:0 6px 20px rgba(122,37,53,.36);}
+
+/* ─── FAQ ─── */
+.faq{background:var(--warm);}
+.faq-inner{max-width:720px;margin:52px auto 0;}
+.fi{border-bottom:1px solid var(--border);overflow:hidden;}
+.fq{padding:18px 0;font-size:0.93rem;font-weight:500;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;transition:color .2s;}
+.fq:hover{color:var(--burg);}
+.fq-ic{width:24px;height:24px;border-radius:5px;background:var(--sand);color:var(--mid);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;transition:all .3s;line-height:1;}
+.fi.open .fq{color:var(--burg);}
+.fi.open .fq-ic{background:var(--burg);color:white;transform:rotate(45deg);}
+.fa{font-size:0.86rem;color:var(--mid);line-height:1.82;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .2s;font-weight:300;}
+.fi.open .fa{max-height:300px;padding-bottom:18px;}
+
+/* ─── CTA ─── */
+.cta-sec{background:var(--sand);padding:88px 6%;text-align:center;}
+.cta-inner{max-width:560px;margin:0 auto;}
+.cta-t{font-family:var(--font-d);font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:var(--ink);line-height:1.15;margin-bottom:16px;letter-spacing:-0.01em;}
+.cta-t em{font-style:italic;color:var(--burg);}
+.cta-p{font-size:0.93rem;color:var(--mid);line-height:1.78;margin-bottom:36px;font-weight:300;}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-ink{background:var(--ink);color:white;padding:13px 28px;border-radius:6px;font-family:var(--font-b);font-size:0.87rem;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:7px;box-shadow:0 3px 12px rgba(28,28,26,.2);transition:all .2s;}
+.btn-ink:hover{background:#333330;transform:translateY(-1px);}
+.btn-line{background:transparent;color:var(--ink);padding:12px 24px;border-radius:6px;font-family:var(--font-b);font-size:0.87rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:7px;border:1.5px solid var(--border);transition:all .2s;}
+.btn-line:hover{border-color:var(--ink);}
+
+/* ─── FOOTER ─── */
+footer{background:var(--ink);padding:72px 6% 40px;}
+.foot-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:52px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:28px;}
+.foot-logo img{height:67px;width:auto;filter:brightness(0) invert(1);opacity:.8;display:block;margin-bottom:14px;}
+.foot-sub{font-size:0.62rem;color:rgba(255,255,255,.25);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:12px;}
+.foot-tag{font-family:var(--font-d);font-style:italic;font-size:0.85rem;color:rgba(255,255,255,.28);line-height:1.75;}
+.foot-ct{font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:14px;}
+.foot-links{display:flex;flex-direction:column;gap:9px;}
+.foot-links a{font-size:0.8rem;color:rgba(255,255,255,.35);text-decoration:none;font-weight:300;transition:color .2s;}
+.foot-links a:hover{color:white;}
+.foot-btm{max-width:1160px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-size:0.67rem;color:rgba(255,255,255,.18);}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:1024px){.prog-grid{grid-template-columns:1fr 1fr;}.stats{grid-template-columns:1fr 1fr;}.stat{border-bottom:1px solid rgba(255,255,255,.1);}.foot-inner{grid-template-columns:1fr 1fr;}.acad-grid{grid-template-columns:1fr;}}
+@media(max-width:860px){.hero{grid-template-columns:1fr;min-height:auto;padding-top:60px;}.hero-left{padding:60px 0 32px;text-align:center;}.hero-body{max-width:100%;}.hero-actions,.hero-chips{justify-content:center;}.hero-right{padding:0 0 60px;}.mission-grid{grid-template-columns:1fr;}.mission-img-wrap{display:none;}.adm-grid{grid-template-columns:1fr;}.nav-links{display:none;}.burger{display:flex;}.frow{grid-template-columns:1fr;}section.sec{padding:64px 5%;}.sec,.stats,.cta-sec{padding-left:5%;padding-right:5%;}.pillars{grid-template-columns:1fr;}.trust{flex-wrap:wrap;gap:4px;padding:12px 5%;}.titem{border-right:none;padding:4px 12px;}}
+@media(max-width:600px){.prog-grid{grid-template-columns:1fr;}.stats{grid-template-columns:1fr 1fr;}.foot-inner{grid-template-columns:1fr;}.foot-btm{flex-direction:column;gap:8px;text-align:center;}.acad-grid{grid-template-columns:1fr;}.form-bod{padding:20px 18px;}.form-head{padding:20px 18px;}}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span class="topbar-l">Now enrolling for 2025–2026 · Grades K–6 · Orange County, CA</span>
+  <div class="topbar-r">
+    <a href="tel:9496457745">(949) 645-7745</a>
+    <a href="tel:7149660303">(714) 966-0303</a>
+    <a href="mailto:intmontessoriusa@gmail.com">Email Us</a>
+    <a href="https://www.intmontessori.com/careers" target="_blank">Careers</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#"><img src="logo.png" alt="International Montessori Academy of USA"></a>
+  <div class="nav-links">
+    <a href="#mission">About</a>
+    <a href="#programs">Programs</a>
+    <a href="#academics">Academics</a>
+    <a href="#admissions">Admissions</a>
+    <a href="#faq">FAQ</a>
+    <a href="#admissions" class="nav-book">Book a Tour</a>
+  </div>
+  <div class="burger" id="burger"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob" id="mob">
+  <a href="#mission" onclick="cm()">About</a>
+  <a href="#programs" onclick="cm()">Programs</a>
+  <a href="#academics" onclick="cm()">Academics</a>
+  <a href="#admissions" onclick="cm()">Admissions</a>
+  <a href="#faq" onclick="cm()">FAQ</a>
+  <a href="#admissions" onclick="cm()">Book a Tour</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="blob"></div>
+  <div class="blob2"></div>
+
+  <div class="hero-left">
+    <div class="hero-eyebrow">Orange County, California</div>
+    <h1 class="hero-title">
+      Where every child<br>
+      is <em>free</em> to <span class="burg">learn</span><br>
+      their own way
+    </h1>
+    <p class="hero-tagline">"Education From The Inside Out"</p>
+    <p class="hero-body">International Montessori Academy provides a learning environment that is emotionally, physically, and spiritually safe — where children learn through doing, and every child is inspired to be all they were created to be.</p>
+    <div class="hero-actions">
+      <a class="btn-fill" href="#admissions">Book a Free Tour</a>
+      <a class="btn-ghost" href="#mission">Our Philosophy</a>
+    </div>
+    <div class="hero-chips">
+      <div class="hchip"><div class="hchip-dot" style="background:var(--burg);"></div>Grades K–6</div>
+      <div class="hchip"><div class="hchip-dot" style="background:var(--teal,#3A7CA5);"></div>2 Campuses</div>
+      <div class="hchip"><div class="hchip-dot" style="background:var(--sage);"></div>Montessori Credentialed</div>
+      <div class="hchip"><div class="hchip-dot" style="background:var(--gold);"></div>CA Curriculum Aligned</div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <!-- Newport Beach -->
+    <div class="lc">
+      <div class="lc-head" style="background:linear-gradient(135deg,#1A7A6E,#0F5F56);">
+        <div class="lc-head-ico">🏫</div>
+        <div>
+          <div class="lc-head-name">Newport Beach Elementary School</div>
+          <div class="lc-head-sub">Elementary Montessori · Newport Beach, CA</div>
+        </div>
+      </div>
+      <div class="lc-body">
+        <div class="lc-row"><div class="lc-ico" style="background:var(--sage-lt);">📍</div><div><div class="lc-lbl">Address</div><div class="lc-val">381 University Drive, Costa Mesa CA 92627</div></div></div>
+        <div class="lc-row"><div class="lc-ico" style="background:var(--sage-lt);">📞</div><div><div class="lc-lbl">Phone</div><div class="lc-val"><a href="tel:9496457745">(949) 645-7745</a></div></div></div>
+        <div class="lc-row"><div class="lc-ico" style="background:var(--sage-lt);">✉️</div><div><div class="lc-lbl">Email</div><div class="lc-val"><a href="mailto:intmontessoriusa@gmail.com">intmontessoriusa@gmail.com</a></div></div></div>
+        <a class="lc-dir" style="background:var(--sage-lt);color:var(--sage);border-color:var(--sage);" href="https://maps.google.com/?q=381+University+Drive+Costa+Mesa+CA+92627" target="_blank">🗺️ Get Directions</a>
+      </div>
+    </div>
+    <!-- Costa Mesa -->
+    <div class="lc">
+      <div class="lc-head" style="background:linear-gradient(135deg,var(--burg),var(--burg-soft));">
+        <div class="lc-head-ico">🏫</div>
+        <div>
+          <div class="lc-head-name">Costa Mesa Elementary School</div>
+          <div class="lc-head-sub">Elementary Montessori · Costa Mesa, CA</div>
+        </div>
+      </div>
+      <div class="lc-body">
+        <div class="lc-row"><div class="lc-ico" style="background:var(--burg-pale);">📍</div><div><div class="lc-lbl">Address</div><div class="lc-val">2950 McClintock Way, Costa Mesa CA 92626</div></div></div>
+        <div class="lc-row"><div class="lc-ico" style="background:var(--burg-pale);">📞</div><div><div class="lc-lbl">Phone</div><div class="lc-val"><a href="tel:7149660303">(714) 966-0303</a></div></div></div>
+        <div class="lc-row"><div class="lc-ico" style="background:var(--burg-pale);">✉️</div><div><div class="lc-lbl">Email</div><div class="lc-val"><a href="mailto:intmontessoriusa@gmail.com">intmontessoriusa@gmail.com</a></div></div></div>
+        <a class="lc-dir" style="background:var(--burg-pale);color:var(--burg);border-color:var(--burg);" href="https://maps.google.com/?q=2950+McClintock+Way+Costa+Mesa+CA+92626" target="_blank">🗺️ Get Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust">
+  <div class="titem"><div class="titem-dot" style="background:var(--terra);"></div>2 Campuses in Orange County</div>
+  <div class="titem"><div class="titem-dot" style="background:var(--sage);"></div>Grades K–6</div>
+  <div class="titem"><div class="titem-dot" style="background:var(--gold);"></div>Love, Harmony & Beauty</div>
+  <div class="titem"><div class="titem-dot" style="background:#8FA8D0;"></div>Montessori Credentialed Teachers</div>
+  <div class="titem"><div class="titem-dot" style="background:var(--burg-rose);"></div>All Backgrounds Welcome</div>
+  <div class="titem"><div class="titem-dot" style="background:#9FB89F;"></div>California Curriculum Aligned</div>
+</div>
+
+<!-- MISSION -->
+<section class="sec mission" id="mission">
+  <div class="sec-inner">
+    <div class="sec-eyebrow" style="color:var(--terra);">Our Philosophy</div>
+    <h2 class="sec-title">Built on <em style="color:var(--burg);">love</em>,<br>guided by the child</h2>
+    <div class="mission-grid">
+      <div class="mission-img-wrap">
+        <img class="mission-img" src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=700&q=80" alt="Teacher with students">
+        <div class="mission-badge">
+          <div class="nb">K–6</div>
+          <div class="nl">All Grade Levels</div>
+        </div>
+      </div>
+      <div class="mission-text">
+        <p>Our mission is to provide an atmosphere of learning that is LOVING emotionally, and physically and spiritually SAFE — one that creates a living and unique Montessori environment where children learn through "doing."</p>
+        <p>We instill tolerance, thoughtfulness, consideration, and responsibility. We celebrate differences in others. The focus is on the heart of the child, while studying their strengths and passions. IMA values diversity and seeks families of all racial, cultural, religious, and economic backgrounds.</p>
+        <p>International Montessori Academy was founded by Inayat Unissa Inayat-Khan Bergum, whose grandfather Hazrat Inayat Khan personally met with Dr. Maria Montessori. IMA carries a legacy of uniting children through Love, Harmony, and Beauty.</p>
+        <div class="pillars">
+          <div class="pillar" style="background:var(--burg-pale);border-color:var(--burg-rose);">
+            <div class="pi">❤️</div><div class="pt" style="color:var(--burg);">Love</div>
+            <div class="pd" style="color:#7A2030;">Children are born with the natural tendency to love — the platform from which they learn most effectively.</div>
+          </div>
+          <div class="pillar" style="background:var(--sage-lt);border-color:#A8C4A8;">
+            <div class="pi">🕊️</div><div class="pt" style="color:var(--sage);">Harmony</div>
+            <div class="pd" style="color:#3A5A3A;">When there is understanding and knowledge, harmony is reached. We rise above differences together.</div>
+          </div>
+          <div class="pillar" style="background:var(--gold-lt);border-color:#E0CC88;">
+            <div class="pi">🌸</div><div class="pt" style="color:var(--gold);">Beauty</div>
+            <div class="pd" style="color:#7A6000;">We inspire children to have ideals, appreciate beauty, and find joy and wonder in learning.</div>
+          </div>
+          <div class="pillar" style="background:var(--terra-lt);border-color:#E0C0B4;">
+            <div class="pi">🧠</div><div class="pt" style="color:var(--terra);">Follow the Child</div>
+            <div class="pd" style="color:#7A3A28;">We create independent learners who attain their personal best at their own level and rhythm.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="sec programs" id="programs">
+  <div class="sec-inner">
+    <div class="sec-eyebrow" style="color:var(--sage);">What We Offer</div>
+    <h2 class="sec-title">Programs for every<br><em>elementary grade</em></h2>
+    <p class="sec-body">From Kindergarten through 6th grade — rooted in the Montessori method where students discover, explore, and create in a prepared, enriched environment.</p>
+    <div class="prog-grid">
+      <div class="prog-card" style="--c-accent:var(--burg);">
+        <img class="prog-img" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=700&q=80" alt="Elementary classroom">
+        <div class="prog-lbl" style="background:var(--burg-pale);color:var(--burg);">🔬 Elementary</div>
+        <div class="prog-name">Elementary K–6</div>
+        <div class="prog-grade">Kindergarten → 6th Grade</div>
+        <div class="prog-desc">Students engage in the Cosmic Curriculum — an integrated study of language arts, mathematics, science, history, and the arts, aligned with California academic standards. Research, collaboration, and independent inquiry are central to every school day.</div>
+      </div>
+      <div class="prog-card" style="--c-accent:var(--sage);">
+        <img class="prog-img" src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=700&q=80" alt="Montessori materials">
+        <div class="prog-lbl" style="background:var(--sage-lt);color:var(--sage);">🧩 Self-Directed</div>
+        <div class="prog-name">Montessori Materials</div>
+        <div class="prog-grade">All Grade Levels</div>
+        <div class="prog-desc">Montessori materials are self-directed and self-correcting — activating a desire to learn more. Each material develops one perception at a time and places responsibility for finding answers on the student.</div>
+      </div>
+      <div class="prog-card" style="--c-accent:var(--terra);">
+        <img class="prog-img" src="https://images.unsplash.com/photo-1519340333755-56e9c1d04579?w=700&q=80" alt="Enrichment activities">
+        <div class="prog-lbl" style="background:var(--terra-lt);color:var(--terra);">🎭 Enrichment</div>
+        <div class="prog-name">Enrichment Activities</div>
+        <div class="prog-grade">Varies by Season</div>
+        <div class="prog-desc">Each campus offers a range of enrichment activities throughout the year. Contact your campus director to find out which programs and after-school offerings are currently available.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACADEMICS -->
+<section class="sec academics" id="academics">
+  <div class="sec-inner">
+    <div class="sec-eyebrow" style="color:var(--sky);">Academic Excellence</div>
+    <h2 class="sec-title">Montessori learning meets<br><em style="color:var(--sky);">California standards</em></h2>
+    <p class="sec-body">Every classroom blends self-directed Montessori learning with rigorous academics aligned to California's curriculum frameworks — so students build deep understanding while staying on track for whatever school comes next.</p>
+    <div class="acad-grid">
+      <div class="acad-card" style="--c-a:var(--burg);">
+        <div class="acad-ico">📖</div>
+        <div class="acad-t">English Language Arts</div>
+        <div class="acad-d">Montessori language materials build phonemic awareness, reading fluency, and writing skills in step with California ELA standards.</div>
+      </div>
+      <div class="acad-card" style="--c-a:var(--sage);">
+        <div class="acad-ico">🔢</div>
+        <div class="acad-t">Mathematics</div>
+        <div class="acad-d">Hands-on materials like the golden beads and bead chains build true number sense while covering California math progressions K–6.</div>
+      </div>
+      <div class="acad-card" style="--c-a:var(--terra);">
+        <div class="acad-ico">🔬</div>
+        <div class="acad-t">Science</div>
+        <div class="acad-d">The Cosmic Curriculum's hands-on experiments and nature study align with Next Generation Science Standards used across California.</div>
+      </div>
+      <div class="acad-card" style="--c-a:var(--gold);">
+        <div class="acad-ico">🌎</div>
+        <div class="acad-t">History & Social Science</div>
+        <div class="acad-d">Timeline work and cultural studies build the geography, civics, and history foundations outlined in California's Social Science framework.</div>
+      </div>
+    </div>
+    <p class="acad-note"><strong>Note:</strong> Curriculum is designed to align with California academic content standards while preserving the independence and pacing of the Montessori method. Contact your campus director for detailed scope and sequence by grade.</p>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><span class="stat-e">🏫</span><div class="stat-n">2</div><div class="stat-l">Campuses — Orange County</div></div>
+  <div class="stat"><span class="stat-e">👩‍🏫</span><div class="stat-n">Small</div><div class="stat-l">Class Sizes</div></div>
+  <div class="stat"><span class="stat-e">📅</span><div class="stat-n">Full</div><div class="stat-l">Day Programs</div></div>
+  <div class="stat"><span class="stat-e">🎓</span><div class="stat-n">K–6</div><div class="stat-l">All Grade Levels</div></div>
+</div>
+
+<!-- ADMISSIONS -->
+<section class="sec admissions" id="admissions">
+  <div class="sec-inner">
+    <div class="sec-eyebrow" style="color:var(--terra);">Enrollment</div>
+    <h2 class="sec-title">Begin your family's<br><em style="color:var(--burg);">IMA journey</em></h2>
+    <p class="sec-body">We welcome families of all racial, cultural, religious, and economic backgrounds. Our process is designed to be an open and welcoming conversation.</p>
+    <div class="adm-grid">
+      <div class="steps">
+        <div class="step" style="--c-s:var(--sage);">
+          <div class="step-n">1</div>
+          <div><div class="step-t">Book a School Tour</div><div class="step-d">Visit your nearest campus, meet the director, and see our prepared environment in action.</div></div>
+        </div>
+        <div class="step" style="--c-s:var(--terra);">
+          <div class="step-n">2</div>
+          <div><div class="step-t">Submit an Application</div><div class="step-d">Complete a short application form. Our team will follow up within one business day to discuss availability.</div></div>
+        </div>
+        <div class="step" style="--c-s:var(--gold);">
+          <div class="step-n">3</div>
+          <div><div class="step-t">Campus Visit & Orientation</div><div class="step-d">Your child visits the classroom. We walk you through curriculum, schedules, and tuition options.</div></div>
+        </div>
+        <div class="step" style="--c-s:var(--burg);">
+          <div class="step-n">4</div>
+          <div><div class="step-t">Welcome to IMA 🎉</div><div class="step-d">Enrollment confirmed. We provide a gentle transition plan so your child feels safe and excited from day one.</div></div>
+        </div>
+      </div>
+      <div class="form-wrap">
+        <div class="form-head">
+          <div class="form-head-t">Book a Tour</div>
+          <div class="form-head-s">We'll confirm your visit within one business day.</div>
+        </div>
+        <div class="form-bod">
+          <form action="https://formspree.io/f/xzdnzkjd" method="POST">
+            <div class="frow">
+              <div class="fg"><label>First Name</label><input type="text" name="First Name" placeholder="Jane" required></div>
+              <div class="fg"><label>Last Name</label><input type="text" name="Last Name" placeholder="Smith" required></div>
+            </div>
+            <div class="fg"><label>Email Address</label><input type="email" name="email" placeholder="jane@example.com" required></div>
+            <div class="fg"><label>Phone Number</label><input type="tel" name="Phone" placeholder="(714) 555-0100"></div>
+            <div class="frow">
+              <div class="fg">
+                <label>Preferred Campus</label>
+                <select name="Campus" required>
+                  <option value="">Select…</option>
+                  <option>Newport Beach Elementary School</option>
+                  <option>Costa Mesa Elementary School</option>
+                </select>
+              </div>
+              <div class="fg">
+                <label>Child's Grade</label>
+                <select name="Grade">
+                  <option value="">Select…</option>
+                  <option>Kindergarten</option>
+                  <option>1st Grade</option>
+                  <option>2nd Grade</option>
+                  <option>3rd Grade</option>
+                  <option>4th Grade</option>
+                  <option>5th Grade</option>
+                  <option>6th Grade</option>
+                </select>
+              </div>
+            </div>
+            <div class="fg"><label>Questions or Notes</label><textarea name="Message" placeholder="Tell us about your child or any questions you have…"></textarea></div>
+            <button type="submit" class="fsub">Book a Tour →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq" id="faq">
+  <div class="sec-inner">
+    <div class="sec-eyebrow" style="color:var(--mid);">Common Questions</div>
+    <h2 class="sec-title">Things families <em style="color:var(--burg);">ask us</em></h2>
+    <div class="faq-inner">
+      <div class="fi"><div class="fq" onclick="tf(this)">What are your student-to-teacher ratios?<span class="fq-ic">+</span></div><div class="fa">Our small class sizes ensure every student receives individualized attention throughout their day — a hallmark of the Montessori approach.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">What is the Montessori method?<span class="fq-ic">+</span></div><div class="fa">Developed in the 1900s by Dr. Maria Montessori — a scientist, mathematician, and physician — the Montessori method is based on the premise that each child is born with a drive to develop themselves. A child learns best through physical activity and the senses, given freedom to discover, explore, and create in an enriched environment with supportive encouragement.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">What are Montessori materials and why are they different?<span class="fq-ic">+</span></div><div class="fa">Montessori materials are self-directed and self-correcting — they activate a desire to learn more because they engage children both physically and mentally. Each material develops one perception at a time and places the responsibility for finding answers on the child, building independence and self-motivation rather than dependency on the teacher.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">Who are your teachers?<span class="fq-ic">+</span></div><div class="fa">All lead teachers hold Montessori credentials and are highly qualified, experienced, innovative, and creative. Our teachers emphasize moral instruction, tolerance, and kindness. They are supported by ECE-qualified teacher's assistants at every campus.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">Do you accept families of different backgrounds and faiths?<span class="fq-ic">+</span></div><div class="fa">Absolutely. International Montessori Academy values diversity and actively seeks families of all racial, cultural, religious, and economic backgrounds. Our founding philosophy of Love, Harmony, and Beauty was built on celebrating differences — not minimizing them.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">What extracurricular activities are available?<span class="fq-ic">+</span></div><div class="fa">Extracurricular activities vary by campus and by season. Please visit your specific campus page on our website, or contact the campus director, to learn which activities and enrichment programs are currently being offered.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">How do I find tuition and fees?<span class="fq-ic">+</span></div><div class="fa">Tuition varies by campus and program level. Please visit our Tuition & Fees page or contact your preferred campus directly. We encourage all interested families to reach out regardless of financial situation — we are committed to making Montessori education accessible.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-sec">
+  <div class="cta-inner">
+    <h2 class="cta-t">Ready to see<br><em>IMA for yourself?</em></h2>
+    <p class="cta-p">Schedule a free tour at either of our Orange County campuses and experience the Montessori difference firsthand.</p>
+    <div class="cta-btns">
+      <a href="#admissions" class="btn-fill">Book a Free Tour</a>
+      <a href="mailto:intmontessoriusa@gmail.com" class="btn-line">Send Us a Message</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div>
+      <div class="foot-logo"><img src="logo.png" alt="International Montessori Academy of USA"></div>
+      <div class="foot-sub">ICMA · Costa Mesa, CA</div>
+      <div class="foot-tag">"Education From The Inside Out"<br><br>Providing a loving, safe, and purposeful Montessori environment in Costa Mesa, CA.</div>
+    </div>
+    <div>
+      <p class="foot-ct">Navigate</p>
+      <div class="foot-links">
+        <a href="#mission">About Us</a>
+        <a href="#mission">Our Mission</a>
+        <a href="#programs">Why Montessori?</a>
+        <a href="https://www.intmontessori.com/tuition-fees" target="_blank">Tuition & Fees</a>
+        <a href="#admissions">Enrollment</a>
+        <a href="https://www.intmontessori.com/careers" target="_blank">Careers</a>
+        <a href="https://www.intmontessori.com/contact-us" target="_blank">Contact</a>
+      </div>
+    </div>
+    <div>
+      <p class="foot-ct">Our Schools</p>
+      <div class="foot-links">
+        <a href="https://www.intmontessori.com/newport-beach-elementary-montessori-school" target="_blank">Newport Beach Elementary</a>
+        <a href="https://www.intmontessori.com/mesa-verde-k-8-montessori-school" target="_blank">Costa Mesa Elementary</a>
+      </div>
+    </div>
+    <div>
+      <p class="foot-ct">Contact</p>
+      <div class="foot-links">
+        <a href="tel:9496457745">(949) 645-7745</a>
+        <a href="tel:7149660303">(714) 966-0303</a>
+        <a href="mailto:intmontessoriusa@gmail.com">intmontessoriusa@gmail.com</a>
+        <a href="#admissions">Book a Tour</a>
+        <a href="https://www.facebook.com/people/International-Montessori-Academies-of-USA/61590869789411/" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/intmontessoriusa" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="foot-btm">
+    <span>© 2014–2026 International Montessori Academies of USA. All rights reserved.</span>
+    <span>Privacy Policy · Sitemap</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('burger').addEventListener('click',()=>{document.getElementById('mob').classList.toggle('open');});
+  function cm(){document.getElementById('mob').classList.remove('open');}
+  function tf(el){const item=el.parentElement;const open=item.classList.contains('open');document.querySelectorAll('.fi').forEach(i=>i.classList.remove('open'));if(!open)item.classList.add('open');}
+</script>
+</body>
+</html>
