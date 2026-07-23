@@ -41,8 +41,8 @@ body{font-family:var(--font-b);background:var(--sand);color:var(--ink);overflow-
 .topbar-r a:hover{color:white;}
 
 /* ─── NAV ─── */
-nav{position:sticky;top:0;z-index:200;background:var(--warm);border-bottom:1px solid var(--border);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:110px;}
-.nav-logo img{height:90.45px;width:auto;display:block;}
+nav{position:sticky;top:0;z-index:200;background:var(--warm);border-bottom:1px solid var(--border);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:74px;}
+.nav-logo img{height:67px;width:auto;display:block;}
 .nav-links{display:flex;gap:0;align-items:center;}
 .nav-links a{font-size:0.8rem;font-weight:500;color:var(--mid);text-decoration:none;padding:8px 13px;border-radius:6px;transition:all .2s;letter-spacing:0.01em;}
 .nav-links a:hover{color:var(--burg);background:var(--burg-pale);}
@@ -243,8 +243,7 @@ footer{background:var(--ink);padding:72px 6% 40px;}
 
 <!-- NAV -->
 <nav>
-<a href="#" class="nav-logo"><img src="logo.png" alt="International Montessori Academy of USA"></a>
-  
+  <a href="#"><img src="logo.png" alt="International Montessori Academy of USA"></a>
   <div class="nav-links">
     <a href="#mission">About</a>
     <a href="#programs">Programs</a>
@@ -254,7 +253,6 @@ footer{background:var(--ink);padding:72px 6% 40px;}
     <a href="#admissions" class="nav-book">Book a Tour</a>
   </div>
   <div class="burger" id="burger"><span></span><span></span><span></span></div>
-  
 </nav>
 <div class="mob" id="mob">
   <a href="#mission" onclick="cm()">About</a>
@@ -273,12 +271,12 @@ footer{background:var(--ink);padding:72px 6% 40px;}
   <div class="hero-left">
     <div class="hero-eyebrow">Orange County, California</div>
     <h1 class="hero-title">
-      Where every child<br>
-      is <em>free</em> to <span class="burg">learn</span><br>
-      their own way
+      Empower your child<br>
+      to <em>thrive</em> — inside<br>
+      <span class="burg">and out</span>
     </h1>
     <p class="hero-tagline">"Education From The Inside Out"</p>
-    <p class="hero-body">International Montessori Academy provides a learning environment that is emotionally, physically, and spiritually safe — where children learn through doing, and every child is inspired to be all they were created to be.</p>
+    <p class="hero-body">At International Montessori Academy, every child feels safe, accepted, and respected. We nurture curiosity, build confidence, and inspire each student to be all they were created to be — through an innovative curriculum where learning comes alive through doing.</p>
     <div class="hero-actions">
       <a class="btn-fill" href="#admissions">Book a Free Tour</a>
       <a class="btn-ghost" href="#mission">Our Philosophy</a>
@@ -331,7 +329,7 @@ footer{background:var(--ink);padding:72px 6% 40px;}
 <div class="trust">
   <div class="titem"><div class="titem-dot" style="background:var(--terra);"></div>2 Campuses in Orange County</div>
   <div class="titem"><div class="titem-dot" style="background:var(--sage);"></div>Grades K–6</div>
-  <div class="titem"><div class="titem-dot" style="background:var(--gold);"></div>Love, Harmony & Beauty</div>
+  <div class="titem"><div class="titem-dot" style="background:var(--gold);"></div>Safe, Accepted & Respected</div>
   <div class="titem"><div class="titem-dot" style="background:#8FA8D0;"></div>Montessori Credentialed Teachers</div>
   <div class="titem"><div class="titem-dot" style="background:var(--burg-rose);"></div>All Backgrounds Welcome</div>
   <div class="titem"><div class="titem-dot" style="background:#9FB89F;"></div>California Curriculum Aligned</div>
@@ -341,7 +339,7 @@ footer{background:var(--ink);padding:72px 6% 40px;}
 <section class="sec mission" id="mission">
   <div class="sec-inner">
     <div class="sec-eyebrow" style="color:var(--terra);">Our Philosophy</div>
-    <h2 class="sec-title">Built on <em style="color:var(--burg);">love</em>,<br>guided by the child</h2>
+    <h2 class="sec-title">Inspiring curiosity,<br><em style="color:var(--burg);">building character</em></h2>
     <div class="mission-grid">
       <div class="mission-img-wrap">
         <img class="mission-img" src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=700&q=80" alt="Teacher with students">
@@ -351,25 +349,25 @@ footer{background:var(--ink);padding:72px 6% 40px;}
         </div>
       </div>
       <div class="mission-text">
-        <p>Our mission is to provide an atmosphere of learning that is LOVING emotionally, and physically and spiritually SAFE — one that creates a living and unique Montessori environment where children learn through "doing."</p>
-        <p>We instill tolerance, thoughtfulness, consideration, and responsibility. We celebrate differences in others. The focus is on the heart of the child, while studying their strengths and passions. IMA values diversity and seeks families of all racial, cultural, religious, and economic backgrounds.</p>
-        <p>International Montessori Academy was founded by Inayat Unissa Inayat-Khan Bergum, whose grandfather Hazrat Inayat Khan personally met with Dr. Maria Montessori. IMA carries a legacy of uniting children through Love, Harmony, and Beauty.</p>
+        <p>International Montessori Academy provides an academically rich, whole-child education in a nurturing, family-centered environment. Our credentialed guides inspire curiosity and a genuine love of learning — cultivating in every student the confidence, strong moral character, and perseverance to thrive.</p>
+        <p>We empower children through an innovative Montessori curriculum where every child feels safe, accepted, and respected. We celebrate diversity and cherish the lifelong relationships that grow from our community. The focus is always on the heart of the child — their strengths, their passions, their potential.</p>
+        <p>IMA was founded on the philosophy of Love, Harmony, and Beauty — values rooted in the belief that when a child feels truly seen and safe, there is no limit to what they can achieve.</p>
         <div class="pillars">
           <div class="pillar" style="background:var(--burg-pale);border-color:var(--burg-rose);">
-            <div class="pi">❤️</div><div class="pt" style="color:var(--burg);">Love</div>
-            <div class="pd" style="color:#7A2030;">Children are born with the natural tendency to love — the platform from which they learn most effectively.</div>
+            <div class="pi">❤️</div><div class="pt" style="color:var(--burg);">Safe & Accepted</div>
+            <div class="pd" style="color:#7A2030;">Every child at IMA feels emotionally, physically, and spiritually safe — the foundation every learner needs to grow.</div>
           </div>
           <div class="pillar" style="background:var(--sage-lt);border-color:#A8C4A8;">
-            <div class="pi">🕊️</div><div class="pt" style="color:var(--sage);">Harmony</div>
-            <div class="pd" style="color:#3A5A3A;">When there is understanding and knowledge, harmony is reached. We rise above differences together.</div>
+            <div class="pi">🕊️</div><div class="pt" style="color:var(--sage);">Strong Character</div>
+            <div class="pd" style="color:#3A5A3A;">We cultivate tolerance, thoughtfulness, and responsibility — students who are as good as they are smart.</div>
           </div>
           <div class="pillar" style="background:var(--gold-lt);border-color:#E0CC88;">
-            <div class="pi">🌸</div><div class="pt" style="color:var(--gold);">Beauty</div>
-            <div class="pd" style="color:#7A6000;">We inspire children to have ideals, appreciate beauty, and find joy and wonder in learning.</div>
+            <div class="pi">🌸</div><div class="pt" style="color:var(--gold);">Genuine Curiosity</div>
+            <div class="pd" style="color:#7A6000;">Our educators inspire a real desire to learn — not for grades, but because discovery is its own reward.</div>
           </div>
           <div class="pillar" style="background:var(--terra-lt);border-color:#E0C0B4;">
-            <div class="pi">🧠</div><div class="pt" style="color:var(--terra);">Follow the Child</div>
-            <div class="pd" style="color:#7A3A28;">We create independent learners who attain their personal best at their own level and rhythm.</div>
+            <div class="pi">🧠</div><div class="pt" style="color:var(--terra);">Whole-Child Growth</div>
+            <div class="pd" style="color:#7A3A28;">Academics, character, creativity, and community — we nurture every dimension of who your child is becoming.</div>
           </div>
         </div>
       </div>
@@ -380,30 +378,30 @@ footer{background:var(--ink);padding:72px 6% 40px;}
 <!-- PROGRAMS -->
 <section class="sec programs" id="programs">
   <div class="sec-inner">
-    <div class="sec-eyebrow" style="color:var(--sage);">What We Offer</div>
-    <h2 class="sec-title">Programs for every<br><em>elementary grade</em></h2>
-    <p class="sec-body">From Kindergarten through 6th grade — rooted in the Montessori method where students discover, explore, and create in a prepared, enriched environment.</p>
+    <div class="sec-eyebrow" style="color:var(--sage);">Whole-Child Education</div>
+    <h2 class="sec-title">Programs that<br><em>empower every child</em></h2>
+    <p class="sec-body">From Kindergarten through 6th grade, IMA combines the proven Montessori method with an innovative curriculum — giving every child the tools to discover who they are and what they're capable of.</p>
     <div class="prog-grid">
       <div class="prog-card" style="--c-accent:var(--burg);">
         <img class="prog-img" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=700&q=80" alt="Elementary classroom">
         <div class="prog-lbl" style="background:var(--burg-pale);color:var(--burg);">🔬 Elementary</div>
         <div class="prog-name">Elementary K–6</div>
         <div class="prog-grade">Kindergarten → 6th Grade</div>
-        <div class="prog-desc">Students engage in the Cosmic Curriculum — an integrated study of language arts, mathematics, science, history, and the arts, aligned with California academic standards. Research, collaboration, and independent inquiry are central to every school day.</div>
+        <div class="prog-desc">An academically challenging, well-balanced Montessori curriculum aligned with California standards. Students pursue language arts, mathematics, science, history, and the arts — building the confidence and perseverance to thrive at every stage of their education.</div>
       </div>
       <div class="prog-card" style="--c-accent:var(--sage);">
         <img class="prog-img" src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=700&q=80" alt="Montessori materials">
         <div class="prog-lbl" style="background:var(--sage-lt);color:var(--sage);">🧩 Self-Directed</div>
         <div class="prog-name">Montessori Materials</div>
         <div class="prog-grade">All Grade Levels</div>
-        <div class="prog-desc">Montessori materials are self-directed and self-correcting — activating a desire to learn more. Each material develops one perception at a time and places responsibility for finding answers on the student.</div>
+        <div class="prog-desc">Specially designed Montessori materials activate genuine curiosity and build real independence. Self-directed and self-correcting, they give students ownership of their learning — developing focus, confidence, and the satisfaction of discovery.</div>
       </div>
       <div class="prog-card" style="--c-accent:var(--terra);">
         <img class="prog-img" src="https://images.unsplash.com/photo-1519340333755-56e9c1d04579?w=700&q=80" alt="Enrichment activities">
         <div class="prog-lbl" style="background:var(--terra-lt);color:var(--terra);">🎭 Enrichment</div>
         <div class="prog-name">Enrichment Activities</div>
         <div class="prog-grade">Varies by Season</div>
-        <div class="prog-desc">Each campus offers a range of enrichment activities throughout the year. Contact your campus director to find out which programs and after-school offerings are currently available.</div>
+        <div class="prog-desc">Beyond academics, students engage in enrichment opportunities that develop the whole child — arts, athletics, community service, and more. Contact your campus director to learn what programs are offered this season.</div>
       </div>
     </div>
   </div>
@@ -413,8 +411,8 @@ footer{background:var(--ink);padding:72px 6% 40px;}
 <section class="sec academics" id="academics">
   <div class="sec-inner">
     <div class="sec-eyebrow" style="color:var(--sky);">Academic Excellence</div>
-    <h2 class="sec-title">Montessori learning meets<br><em style="color:var(--sky);">California standards</em></h2>
-    <p class="sec-body">Every classroom blends self-directed Montessori learning with rigorous academics aligned to California's curriculum frameworks — so students build deep understanding while staying on track for whatever school comes next.</p>
+    <h2 class="sec-title">A curriculum as<br><em style="color:var(--sky);">wide as the world</em></h2>
+    <p class="sec-body">We provide an academically challenging, well-balanced education that nurtures each student in an inclusive environment. Our faculty inspires curiosity and a desire to learn — preparing students with the confidence, skills, and character to thrive in whatever comes next.</p>
     <div class="acad-grid">
       <div class="acad-card" style="--c-a:var(--burg);">
         <div class="acad-ico">📖</div>
@@ -453,8 +451,8 @@ footer{background:var(--ink);padding:72px 6% 40px;}
 <section class="sec admissions" id="admissions">
   <div class="sec-inner">
     <div class="sec-eyebrow" style="color:var(--terra);">Enrollment</div>
-    <h2 class="sec-title">Begin your family's<br><em style="color:var(--burg);">IMA journey</em></h2>
-    <p class="sec-body">We welcome families of all racial, cultural, religious, and economic backgrounds. Our process is designed to be an open and welcoming conversation.</p>
+    <h2 class="sec-title">Welcome your child<br><em style="color:var(--burg);">to a place they'll love</em></h2>
+    <p class="sec-body">We celebrate diversity and welcome families of all racial, cultural, religious, and economic backgrounds. Our admissions process is warm, straightforward, and built around getting to know your family.</p>
     <div class="adm-grid">
       <div class="steps">
         <div class="step" style="--c-s:var(--sage);">
@@ -539,8 +537,8 @@ footer{background:var(--ink);padding:72px 6% 40px;}
 <!-- CTA -->
 <div class="cta-sec">
   <div class="cta-inner">
-    <h2 class="cta-t">Ready to see<br><em>IMA for yourself?</em></h2>
-    <p class="cta-p">Schedule a free tour at either of our Orange County campuses and experience the Montessori difference firsthand.</p>
+    <h2 class="cta-t">Give your child a place<br><em>where they truly belong</em></h2>
+    <p class="cta-p">Schedule a free tour at either of our Orange County campuses. See our prepared classrooms, meet our educators, and discover what it means when every child feels safe, accepted, and empowered to learn.</p>
     <div class="cta-btns">
       <a href="#admissions" class="btn-fill">Book a Free Tour</a>
       <a href="mailto:intmontessoriusa@gmail.com" class="btn-line">Send Us a Message</a>
