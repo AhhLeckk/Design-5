@@ -32,17 +32,15 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:var(--font-b);background:var(--sand);color:var(--ink);overflow-x:hidden;line-height:1.6;}
-
 /* ─── TOPBAR ─── */
 .topbar{background:var(--ink);padding:9px 6%;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;}
 .topbar-l{font-size:0.7rem;color:rgba(255,255,255,0.45);letter-spacing:0.06em;}
 .topbar-r{display:flex;gap:18px;}
 .topbar-r a{font-size:0.7rem;color:rgba(255,255,255,0.6);text-decoration:none;font-weight:500;transition:color .2s;}
 .topbar-r a:hover{color:white;}
-
 /* ─── NAV ─── */
-nav{position:sticky;top:0;z-index:200;background:var(--warm);border-bottom:1px solid var(--border);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:116px;}
-.nav-logo img{height:100px;width:auto;display:block;}
+nav{position:sticky;top:0;z-index:200;background:var(--warm);border-bottom:1px solid var(--border);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:92px;}
+.nav-logo img{height:67px;width:auto;display:block;}
 .nav-links{display:flex;gap:0;align-items:center;}
 .nav-links a{font-size:0.8rem;font-weight:500;color:var(--mid);text-decoration:none;padding:8px 13px;border-radius:6px;transition:all .2s;letter-spacing:0.01em;}
 .nav-links a:hover{color:var(--burg);background:var(--burg-pale);}
@@ -53,18 +51,14 @@ nav{position:sticky;top:0;z-index:200;background:var(--warm);border-bottom:1px s
 .mob{display:none;position:fixed;inset:0;z-index:199;background:var(--warm);padding:90px 6% 40px;flex-direction:column;gap:0;}
 .mob.open{display:flex;}
 .mob a{font-family:var(--font-d);font-size:1.8rem;font-weight:300;color:var(--ink);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--border);}
-
 /* ─── HERO ─── */
 .hero{background:var(--warm);min-height:92vh;padding:0 6%;display:grid;grid-template-columns:1.1fr 0.9fr;align-items:center;gap:48px;position:relative;overflow:hidden;}
-
 /* signature blob */
 .blob{position:absolute;top:-180px;left:-160px;width:680px;height:680px;border-radius:63% 37% 54% 46% / 55% 48% 52% 45%;background:var(--terra-lt);opacity:0.55;pointer-events:none;z-index:0;}
 .blob2{position:absolute;bottom:-120px;right:-80px;width:360px;height:360px;border-radius:40% 60% 70% 30% / 45% 55% 45% 55%;background:var(--sage-lt);opacity:0.5;pointer-events:none;z-index:0;}
-
 .hero-left{position:relative;z-index:1;padding:80px 0;}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-b);font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--terra);margin-bottom:24px;}
 .hero-eyebrow::before{content:'';display:inline-block;width:24px;height:2px;background:var(--terra);border-radius:2px;}
-
 .hero-title{font-family:var(--font-d);font-size:clamp(3rem,5.5vw,5.2rem);font-weight:300;color:var(--ink);line-height:1.03;letter-spacing:-0.02em;margin-bottom:6px;}
 .hero-title .burg{color:var(--burg);}
 .hero-title em{font-style:italic;font-weight:300;}
@@ -78,7 +72,6 @@ nav{position:sticky;top:0;z-index:200;background:var(--warm);border-bottom:1px s
 .hero-chips{display:flex;gap:8px;flex-wrap:wrap;}
 .hchip{font-size:0.75rem;font-weight:500;color:var(--mid);background:var(--sand);border:1px solid var(--border);padding:6px 12px;border-radius:20px;display:flex;align-items:center;gap:5px;}
 .hchip-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
-
 /* ─── HERO RIGHT: LOCATION CARDS ─── */
 .hero-right{position:relative;z-index:1;padding:80px 0;display:flex;flex-direction:column;gap:14px;}
 .lc{background:var(--warm);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(28,28,26,.07);transition:all .2s;}
@@ -95,14 +88,12 @@ nav{position:sticky;top:0;z-index:200;background:var(--warm);border-bottom:1px s
 .lc-val a{color:var(--burg);text-decoration:none;font-weight:500;}
 .lc-val a:hover{text-decoration:underline;}
 .lc-dir{display:inline-flex;align-items:center;gap:5px;padding:6px 12px;border-radius:6px;font-size:0.74rem;font-weight:600;text-decoration:none;transition:all .2s;align-self:flex-start;margin-top:4px;border:1px solid transparent;}
-
 /* ─── TRUST STRIP ─── */
 .trust{background:var(--ink);padding:14px 6%;display:flex;align-items:center;gap:0;overflow-x:auto;}
 .titem{display:flex;align-items:center;gap:8px;padding:6px 24px;font-size:0.73rem;font-weight:400;color:rgba(255,255,255,.5);border-right:1px solid rgba(255,255,255,.1);white-space:nowrap;flex-shrink:0;}
 .titem:first-child{padding-left:0;}
 .titem:last-child{border-right:none;}
 .titem-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
-
 /* ─── SECTION SHELL ─── */
 .sec{padding:96px 6%;}
 .sec-inner{max-width:1160px;margin:0 auto;}
@@ -111,7 +102,6 @@ nav{position:sticky;top:0;z-index:200;background:var(--warm);border-bottom:1px s
 .sec-title{font-family:var(--font-d);font-size:clamp(1.9rem,3vw,2.8rem);font-weight:300;color:var(--ink);line-height:1.15;letter-spacing:-0.01em;}
 .sec-title em{font-style:italic;}
 .sec-body{font-size:0.95rem;color:var(--mid);line-height:1.8;max-width:540px;margin-top:14px;font-weight:300;}
-
 /* ─── MISSION ─── */
 .mission{background:var(--warm);}
 .mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:56px;}
@@ -127,7 +117,6 @@ nav{position:sticky;top:0;z-index:200;background:var(--warm);border-bottom:1px s
 .pi{font-size:1.5rem;margin-bottom:8px;}
 .pt{font-size:0.87rem;font-weight:600;color:var(--ink);margin-bottom:4px;}
 .pd{font-size:0.76rem;line-height:1.6;color:var(--mid);font-weight:300;}
-
 /* ─── PROGRAMS ─── */
 .programs{background:var(--sand);}
 .prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:52px;background:var(--border);border-radius:12px;overflow:hidden;}
@@ -139,7 +128,6 @@ nav{position:sticky;top:0;z-index:200;background:var(--warm);border-bottom:1px s
 .prog-name{font-family:var(--font-d);font-size:1.3rem;font-weight:400;color:var(--ink);margin-bottom:5px;line-height:1.2;}
 .prog-grade{font-size:0.71rem;font-weight:600;color:var(--mid);margin-bottom:10px;letter-spacing:0.04em;text-transform:uppercase;}
 .prog-desc{font-size:0.82rem;color:var(--mid);line-height:1.7;font-weight:300;}
-
 /* ─── ACADEMICS ─── */
 .academics{background:var(--warm);}
 .acad-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:48px;}
@@ -151,7 +139,6 @@ nav{position:sticky;top:0;z-index:200;background:var(--warm);border-bottom:1px s
 .acad-t{font-size:0.95rem;font-weight:600;color:var(--ink);margin-bottom:7px;}
 .acad-d{font-size:0.82rem;color:var(--mid);line-height:1.72;font-weight:300;}
 .acad-note{font-size:0.76rem;color:var(--mid);margin-top:16px;padding:14px 18px;background:var(--sand);border-radius:8px;border-left:3px solid var(--border);line-height:1.65;font-weight:300;}
-
 /* ─── STATS ─── */
 .stats{background:var(--burg);padding:0 6%;display:grid;grid-template-columns:repeat(4,1fr);}
 .stat{padding:48px 24px;text-align:center;border-right:1px solid rgba(255,255,255,.12);position:relative;}
@@ -159,7 +146,6 @@ nav{position:sticky;top:0;z-index:200;background:var(--warm);border-bottom:1px s
 .stat-n{font-family:var(--font-d);font-size:3rem;font-weight:300;color:white;line-height:1;margin-bottom:6px;letter-spacing:-0.02em;}
 .stat-l{font-size:0.71rem;font-weight:500;color:rgba(255,255,255,.55);letter-spacing:0.07em;text-transform:uppercase;}
 .stat-e{font-size:1.6rem;margin-bottom:12px;display:block;}
-
 /* ─── ADMISSIONS ─── */
 .admissions{background:var(--sand);}
 .adm-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:72px;align-items:start;margin-top:52px;}
@@ -169,7 +155,6 @@ nav{position:sticky;top:0;z-index:200;background:var(--warm);border-bottom:1px s
 .step-n{font-family:var(--font-d);font-size:2rem;font-weight:300;color:var(--c-s,var(--burg));line-height:1;flex-shrink:0;width:36px;}
 .step-t{font-size:0.9rem;font-weight:600;color:var(--ink);margin-bottom:4px;}
 .step-d{font-size:0.8rem;color:var(--mid);line-height:1.6;font-weight:300;}
-
 /* ─── FORM ─── */
 .form-wrap{background:var(--warm);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 4px 32px rgba(28,28,26,.08);}
 .form-head{background:var(--ink);padding:24px 28px;}
@@ -185,7 +170,6 @@ nav{position:sticky;top:0;z-index:200;background:var(--warm);border-bottom:1px s
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 .fsub{width:100%;padding:13px;background:var(--burg);color:white;font-family:var(--font-b);font-size:0.9rem;font-weight:600;border:none;cursor:pointer;border-radius:6px;box-shadow:0 3px 12px rgba(122,37,53,.28);transition:all .2s;letter-spacing:0.02em;}
 .fsub:hover{background:var(--burg-soft);transform:translateY(-1px);box-shadow:0 6px 20px rgba(122,37,53,.36);}
-
 /* ─── FAQ ─── */
 .faq{background:var(--warm);}
 .faq-inner{max-width:720px;margin:52px auto 0;}
@@ -197,7 +181,6 @@ nav{position:sticky;top:0;z-index:200;background:var(--warm);border-bottom:1px s
 .fi.open .fq-ic{background:var(--burg);color:white;transform:rotate(45deg);}
 .fa{font-size:0.86rem;color:var(--mid);line-height:1.82;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .2s;font-weight:300;}
 .fi.open .fa{max-height:300px;padding-bottom:18px;}
-
 /* ─── CTA ─── */
 .cta-sec{background:var(--sand);padding:88px 6%;text-align:center;}
 .cta-inner{max-width:560px;margin:0 auto;}
@@ -209,7 +192,6 @@ nav{position:sticky;top:0;z-index:200;background:var(--warm);border-bottom:1px s
 .btn-ink:hover{background:#333330;transform:translateY(-1px);}
 .btn-line{background:transparent;color:var(--ink);padding:12px 24px;border-radius:6px;font-family:var(--font-b);font-size:0.87rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:7px;border:1.5px solid var(--border);transition:all .2s;}
 .btn-line:hover{border-color:var(--ink);}
-
 /* ─── FOOTER ─── */
 footer{background:var(--ink);padding:72px 6% 40px;}
 .foot-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:52px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:28px;}
@@ -221,7 +203,6 @@ footer{background:var(--ink);padding:72px 6% 40px;}
 .foot-links a{font-size:0.8rem;color:rgba(255,255,255,.35);text-decoration:none;font-weight:300;transition:color .2s;}
 .foot-links a:hover{color:white;}
 .foot-btm{max-width:1160px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-size:0.67rem;color:rgba(255,255,255,.18);}
-
 /* ─── RESPONSIVE ─── */
 @media(max-width:1024px){.prog-grid{grid-template-columns:1fr 1fr;}.stats{grid-template-columns:1fr 1fr;}.stat{border-bottom:1px solid rgba(255,255,255,.1);}.foot-inner{grid-template-columns:1fr 1fr;}.acad-grid{grid-template-columns:1fr;}}
 @media(max-width:860px){.hero{grid-template-columns:1fr;min-height:auto;padding-top:60px;}.hero-left{padding:60px 0 32px;text-align:center;}.hero-body{max-width:100%;}.hero-actions,.hero-chips{justify-content:center;}.hero-right{padding:0 0 60px;}.mission-grid{grid-template-columns:1fr;}.mission-img-wrap{display:none;}.adm-grid{grid-template-columns:1fr;}.nav-links{display:none;}.burger{display:flex;}.frow{grid-template-columns:1fr;}section.sec{padding:64px 5%;}.sec,.stats,.cta-sec{padding-left:5%;padding-right:5%;}.pillars{grid-template-columns:1fr;}.trust{flex-wrap:wrap;gap:4px;padding:12px 5%;}.titem{border-right:none;padding:4px 12px;}}
@@ -229,7 +210,6 @@ footer{background:var(--ink);padding:72px 6% 40px;}
 </style>
 </head>
 <body>
-
 <!-- TOPBAR -->
 <div class="topbar">
   <span class="topbar-l">Now enrolling for 2025–2026 · Grades K–6 · Orange County, CA</span>
@@ -240,14 +220,14 @@ footer{background:var(--ink);padding:72px 6% 40px;}
     <a href="https://www.intmontessori.com/careers" target="_blank">Careers</a>
   </div>
 </div>
-
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo"><img src="logo.png" alt="International Montessori Academy of USA"></a>
+  <a href="#"><img src="logo.png" alt="International Montessori Academy of USA"></a>
   <div class="nav-links">
     <a href="#mission">About</a>
     <a href="#programs">Programs</a>
     <a href="#academics">Academics</a>
+    <a href="#our-school">Our School</a>
     <a href="#admissions">Admissions</a>
     <a href="#faq">FAQ</a>
     <a href="#admissions" class="nav-book">Book a Tour</a>
@@ -258,16 +238,15 @@ footer{background:var(--ink);padding:72px 6% 40px;}
   <a href="#mission" onclick="cm()">About</a>
   <a href="#programs" onclick="cm()">Programs</a>
   <a href="#academics" onclick="cm()">Academics</a>
+  <a href="#our-school" onclick="cm()">Our School</a>
   <a href="#admissions" onclick="cm()">Admissions</a>
   <a href="#faq" onclick="cm()">FAQ</a>
   <a href="#admissions" onclick="cm()">Book a Tour</a>
 </div>
-
 <!-- HERO -->
 <section class="hero">
   <div class="blob"></div>
   <div class="blob2"></div>
-
   <div class="hero-left">
     <div class="hero-eyebrow">Orange County, California</div>
     <h1 class="hero-title">
@@ -288,7 +267,6 @@ footer{background:var(--ink);padding:72px 6% 40px;}
       <div class="hchip"><div class="hchip-dot" style="background:var(--gold);"></div>CA Curriculum Aligned</div>
     </div>
   </div>
-
   <div class="hero-right">
     <!-- Newport Beach -->
     <div class="lc">
@@ -324,7 +302,6 @@ footer{background:var(--ink);padding:72px 6% 40px;}
     </div>
   </div>
 </section>
-
 <!-- TRUST STRIP -->
 <div class="trust">
   <div class="titem"><div class="titem-dot" style="background:var(--terra);"></div>2 Campuses in Orange County</div>
@@ -334,7 +311,6 @@ footer{background:var(--ink);padding:72px 6% 40px;}
   <div class="titem"><div class="titem-dot" style="background:var(--burg-rose);"></div>All Backgrounds Welcome</div>
   <div class="titem"><div class="titem-dot" style="background:#9FB89F;"></div>California Curriculum Aligned</div>
 </div>
-
 <!-- MISSION -->
 <section class="sec mission" id="mission">
   <div class="sec-inner">
@@ -374,7 +350,6 @@ footer{background:var(--ink);padding:72px 6% 40px;}
     </div>
   </div>
 </section>
-
 <!-- PROGRAMS -->
 <section class="sec programs" id="programs">
   <div class="sec-inner">
@@ -406,7 +381,6 @@ footer{background:var(--ink);padding:72px 6% 40px;}
     </div>
   </div>
 </section>
-
 <!-- ACADEMICS -->
 <section class="sec academics" id="academics">
   <div class="sec-inner">
@@ -438,7 +412,6 @@ footer{background:var(--ink);padding:72px 6% 40px;}
     <p class="acad-note"><strong>Note:</strong> Curriculum is designed to align with California academic content standards while preserving the independence and pacing of the Montessori method. Contact your campus director for detailed scope and sequence by grade.</p>
   </div>
 </section>
-
 <!-- STATS -->
 <div class="stats">
   <div class="stat"><span class="stat-e">🏫</span><div class="stat-n">2</div><div class="stat-l">Campuses — Orange County</div></div>
@@ -446,7 +419,6 @@ footer{background:var(--ink);padding:72px 6% 40px;}
   <div class="stat"><span class="stat-e">📅</span><div class="stat-n">Full</div><div class="stat-l">Day Programs</div></div>
   <div class="stat"><span class="stat-e">🎓</span><div class="stat-n">K–6</div><div class="stat-l">All Grade Levels</div></div>
 </div>
-
 <!-- ADMISSIONS -->
 <section class="sec admissions" id="admissions">
   <div class="sec-inner">
@@ -516,7 +488,103 @@ footer{background:var(--ink);padding:72px 6% 40px;}
     </div>
   </div>
 </section>
-
+<!-- OUR SCHOOL -->
+<section class="sec" style="background:var(--sand);" id="our-school">
+  <div class="sec-inner">
+    <div class="sec-eyebrow" style="color:var(--burg);">Our School</div>
+    <h2 class="sec-title">Where every child is<br><em style="color:var(--burg);">known, valued, and empowered</em></h2>
+    <p class="sec-body">IMA is an independent school that merges the Montessori curriculum with California standards — giving every child the confidence to think critically, explore ideas, and grow into a creative, compassionate leader.</p>
+    <!-- TWO COLUMN INTRO -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:52px;">
+      <div style="background:var(--warm);border-radius:12px;padding:32px;border:1px solid var(--border);">
+        <div style="font-size:1.8rem;margin-bottom:14px;">🏫</div>
+        <div style="font-family:var(--font-d);font-size:1.2rem;font-weight:400;color:var(--ink);margin-bottom:12px;">Small, Intimate Classrooms</div>
+        <p style="font-size:0.85rem;color:var(--mid);line-height:1.78;font-weight:300;">Our classrooms are personal and intentional. Individual studies are celebrated and encouraged. Each child has a voice, feels safe, and is genuinely valued — not just as a student, but as a person.</p>
+        <p style="font-size:0.85rem;color:var(--mid);line-height:1.78;font-weight:300;margin-top:10px;">Not all students learn at the same pace or through the same approach. Students are supported with opportunities for individual study and comprehension alongside the broader class.</p>
+      </div>
+      <div style="background:var(--warm);border-radius:12px;padding:32px;border:1px solid var(--border);">
+        <div style="font-size:1.8rem;margin-bottom:14px;">📚</div>
+        <div style="font-family:var(--font-d);font-size:1.2rem;font-weight:400;color:var(--ink);margin-bottom:12px;">A Broad, Rich Curriculum</div>
+        <p style="font-size:0.85rem;color:var(--mid);line-height:1.78;font-weight:300;">Children are exposed to a wide spectrum of subjects and cultural knowledge — robust math and reading, followed by geography, history, science, botany, zoology, art, music, sports, and more.</p>
+        <p style="font-size:0.85rem;color:var(--mid);line-height:1.78;font-weight:300;margin-top:10px;">IMA also welcomes homeschooled children with the opportunity to attend and participate during academic days of their preference.</p>
+      </div>
+    </div>
+    <!-- CHARACTER TRAINING HEADER -->
+    <div style="margin-top:64px;padding-bottom:20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:16px;">
+      <div style="width:4px;height:48px;background:var(--burg);border-radius:2px;flex-shrink:0;"></div>
+      <div>
+        <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--terra);margin-bottom:4px;">Character Training</div>
+        <h3 style="font-family:var(--font-d);font-size:1.7rem;font-weight:400;color:var(--ink);line-height:1.15;">Personal responsibility, interpersonal<br><em>respect, and integrity</em></h3>
+      </div>
+    </div>
+    <p style="font-size:0.93rem;color:var(--mid);line-height:1.82;font-weight:300;max-width:640px;margin-top:20px;margin-bottom:40px;">Our program focuses on core ethical performance values to build strong decision-making skills — because character education is the foundation of everything we do. Education from the Inside Out.</p>
+    <!-- CHARACTER PILLARS GRID -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+      <!-- Personal Responsibility -->
+      <div style="background:var(--warm);border-radius:12px;padding:28px;border:1px solid var(--border);border-top:3px solid var(--burg);transition:all .2s;" onmouseover="this.style.boxShadow='0 6px 24px rgba(28,28,26,.1)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='';this.style.transform=''">
+        <div style="font-size:1.6rem;margin-bottom:12px;">🎯</div>
+        <div style="font-family:var(--font-d);font-size:1.05rem;font-weight:400;color:var(--burg);margin-bottom:14px;">Personal Responsibility</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div>
+            <div style="font-size:0.75rem;font-weight:700;color:var(--ink);margin-bottom:3px;">Self-Discipline</div>
+            <div style="font-size:0.78rem;color:var(--mid);line-height:1.6;font-weight:300;">Learning control over impulses and habits — building the foundation for lifelong self-management.</div>
+          </div>
+          <div>
+            <div style="font-size:0.75rem;font-weight:700;color:var(--ink);margin-bottom:3px;">Accountability</div>
+            <div style="font-size:0.78rem;color:var(--mid);line-height:1.6;font-weight:300;">Owning choices, duties, and mistakes rather than blaming others — developing genuine integrity.</div>
+          </div>
+          <div>
+            <div style="font-size:0.75rem;font-weight:700;color:var(--ink);margin-bottom:3px;">Perseverance</div>
+            <div style="font-size:0.78rem;color:var(--mid);line-height:1.6;font-weight:300;">Developing a strong work ethic and the determination to finish what they start.</div>
+          </div>
+        </div>
+      </div>
+      <!-- Interpersonal Respect -->
+      <div style="background:var(--warm);border-radius:12px;padding:28px;border:1px solid var(--border);border-top:3px solid var(--sage);transition:all .2s;" onmouseover="this.style.boxShadow='0 6px 24px rgba(28,28,26,.1)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='';this.style.transform=''">
+        <div style="font-size:1.6rem;margin-bottom:12px;">🤝</div>
+        <div style="font-family:var(--font-d);font-size:1.05rem;font-weight:400;color:var(--sage);margin-bottom:14px;">Interpersonal Respect & Ethics</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div>
+            <div style="font-size:0.75rem;font-weight:700;color:var(--ink);margin-bottom:3px;">Empathy & Compassion</div>
+            <div style="font-size:0.78rem;color:var(--mid);line-height:1.6;font-weight:300;">Understanding how actions affect others, and responding with genuine kindness and care.</div>
+          </div>
+          <div>
+            <div style="font-size:0.75rem;font-weight:700;color:var(--ink);margin-bottom:3px;">Honesty & Integrity</div>
+            <div style="font-size:0.78rem;color:var(--mid);line-height:1.6;font-weight:300;">Telling the truth and aligning personal values with daily actions — being the same person in every room.</div>
+          </div>
+          <div>
+            <div style="font-size:0.75rem;font-weight:700;color:var(--ink);margin-bottom:3px;">Fairness & Cooperation</div>
+            <div style="font-size:0.78rem;color:var(--mid);line-height:1.6;font-weight:300;">Practicing good sportsmanship, teamwork, and a genuine respect for rules and fellow students.</div>
+          </div>
+        </div>
+      </div>
+      <!-- Civic & Social Virtues -->
+      <div style="background:var(--warm);border-radius:12px;padding:28px;border:1px solid var(--border);border-top:3px solid var(--terra);transition:all .2s;" onmouseover="this.style.boxShadow='0 6px 24px rgba(28,28,26,.1)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='';this.style.transform=''">
+        <div style="font-size:1.6rem;margin-bottom:12px;">🌍</div>
+        <div style="font-family:var(--font-d);font-size:1.05rem;font-weight:400;color:var(--terra);margin-bottom:14px;">Civic & Social Virtues</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div>
+            <div style="font-size:0.75rem;font-weight:700;color:var(--ink);margin-bottom:3px;">Good Citizenship</div>
+            <div style="font-size:0.78rem;color:var(--mid);line-height:1.6;font-weight:300;">Contributing positively to the community, helping others and peers — understanding we are part of something larger than ourselves.</div>
+          </div>
+          <div>
+            <div style="font-size:0.75rem;font-weight:700;color:var(--ink);margin-bottom:3px;">Gratitude</div>
+            <div style="font-size:0.78rem;color:var(--mid);line-height:1.6;font-weight:300;">Expressing genuine appreciation to combat entitlement — developing thankfulness as a daily practice, not just a feeling.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BOTTOM CALLOUT -->
+    <div style="margin-top:40px;background:linear-gradient(135deg,var(--burg-dark),var(--burg));border-radius:12px;padding:36px 40px;display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
+      <div style="font-size:2.5rem;flex-shrink:0;">💡</div>
+      <div style="flex:1;min-width:240px;">
+        <div style="font-family:var(--font-d);font-size:1.2rem;font-weight:400;color:white;margin-bottom:8px;">IMA fosters critical thinking, creative thinking, and problem solving</div>
+        <p style="font-size:0.85rem;color:rgba(255,255,255,.7);line-height:1.75;font-weight:300;">Our program includes character education, self-control, honesty, respect for self and others, perseverance, and empathy — the essential building blocks for building future leaders.</p>
+      </div>
+      <a href="#admissions" style="background:white;color:var(--burg);padding:12px 24px;border-radius:6px;font-family:var(--font-b);font-size:0.87rem;font-weight:700;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:all .2s;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform=''">Book a Tour →</a>
+    </div>
+  </div>
+</section>
 <!-- FAQ -->
 <section class="sec faq" id="faq">
   <div class="sec-inner">
@@ -533,7 +601,6 @@ footer{background:var(--ink);padding:72px 6% 40px;}
     </div>
   </div>
 </section>
-
 <!-- CTA -->
 <div class="cta-sec">
   <div class="cta-inner">
@@ -545,7 +612,6 @@ footer{background:var(--ink);padding:72px 6% 40px;}
     </div>
   </div>
 </div>
-
 <!-- FOOTER -->
 <footer>
   <div class="foot-inner">
@@ -590,11 +656,11 @@ footer{background:var(--ink);padding:72px 6% 40px;}
     <span>Privacy Policy · Sitemap</span>
   </div>
 </footer>
-
 <script>
   document.getElementById('burger').addEventListener('click',()=>{document.getElementById('mob').classList.toggle('open');});
   function cm(){document.getElementById('mob').classList.remove('open');}
   function tf(el){const item=el.parentElement;const open=item.classList.contains('open');document.querySelectorAll('.fi').forEach(i=>i.classList.remove('open'));if(!open)item.classList.add('open');}
 </script>
 </body>
+</html>
 </html>
